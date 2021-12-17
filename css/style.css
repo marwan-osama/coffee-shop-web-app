@@ -1,0 +1,323 @@
+:root {
+    --color-dark1: #592C12;
+    --color-dark2: #260E05;
+    --color-light1:#D9C7A7;
+    --color-light2: #BFA78A;
+}
+
+@media screen and (max-width: 1024px) {
+    #hero-text h2 {
+        font-weight: 700 !important;
+    }
+    .product-card-wrapper {
+        margin: 12px 4px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    #nav-bar {
+        align-items: center !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    #nav-bar > * {
+        padding: 12px 0 !important;
+    }
+    #nav-bar-wrapper {
+        height: auto !important;
+    }
+    .page-section {
+        width: 100% !important;
+    }
+    .product-card-bottom > * {
+        margin: 6px 0 !important;
+    }
+}
+
+body {
+    background-color: var(--color-light1);
+    color: #333;
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+.color-dark1 {
+    color: var(--color-dark1);
+    border-color: var(--color-dark1);
+}.color-dark2 {
+    color: var(--color-dark2);
+    border-color: var(--color-dark2);
+}.color-light1 {
+    color: var(--color-light1);
+    border-color: var(--color-light1);
+}.color-light2 {
+    color: var(--color-light2);
+    border-color: var(--color-light2);
+}
+
+.background-light1 {
+    background-color: var(--color-light1);
+}.background-light2 {
+    background-color: var(--color-light2);
+}.background-dark1 {
+    background-color: var(--color-dark1);
+}.background-dark2 {
+    background-color: var(--color-dark2);
+}
+
+
+#page-hero-wrapper {
+    width: 100%;
+    height: 75vh;
+    background-position: bottom !important;
+    background-size: cover !important;
+}
+#nav-bar-wrapper {
+    width: 100%;
+    border-bottom: solid 1px #999;
+    height: 8%;
+    min-height: 60px;
+}
+#nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    color: #f3f3f3;
+}
+#nav-bar-list {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+#nav-bar-list li{
+    display: inline;
+    margin: 12px;
+    cursor: pointer;
+    font-size: calc(14px + 0.2vw);
+}
+#page-hero-logo {
+    font-family: "Petit Formal Script", Arial, Helvetica, sans-serif;
+}
+#page-hero-logo h1{
+    margin: 0;
+    display: inline-block;
+    font-size: calc(24px + 0.4vw);
+}
+#page-hero-content {
+    position: relative;
+    width: 80%;
+    min-width: 300px;
+    margin: auto;
+    height: 92%;
+}
+#hero-text {
+    position: absolute;
+    bottom: 32%;
+    left: 0;
+    width: 50%;
+    min-width: 300px;
+    max-width: 600px;
+    font-size: calc(14px + 0.5vw); 
+    color: #f3f3f3;
+}
+#hero-text h2 {
+    font-weight: 400;
+    font-size: calc(16px + 1.6vw);
+    line-height: 1.1em;
+}
+#hero-text p {
+    line-height: 1.4em;
+}
+#hero-buttons-wrapper {
+    color: #f3f3f3;
+    width: 100%;
+}
+#hero-buttons-wrapper a {
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+}
+#hero-main-button {
+    background-color: var(--color-light1);
+    color: var(--color-dark2);
+}
+#hero-extra-button {
+    background-color: var(--color-dark1);
+    color: var(--color-light1);
+}
+
+
+
+.page-section-wrapper {
+    width: 100%;
+    padding: 24px 0;
+}
+
+.page-section {
+    width: 80%;
+    max-width: 1322px;
+    margin: auto;
+}
+.section-title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Petit Formal Script";
+    border-bottom: solid 2px;
+    padding: 8px 0;
+    margin: 0;
+}
+
+
+#products {
+    padding: 32px 0;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.product-border1 {
+    transform: rotate(2deg);
+    display: inline-block;
+    background-color: #444;
+}
+.product-border2 {
+    transform: rotate(-2deg);
+    border: solid 2px var(--color-dark2);
+    display: inline-block;
+    background-color: #f3f3f3;
+}
+.product-card-wrapper {
+    margin: 12px;
+}
+.product-card-content {
+    width: calc(140px + 6vw);
+    height: calc(200px + 6vw);
+}
+.product-card-top {
+    padding: 12px;
+}
+.product-card-image-wrapper {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+.product-card-top img {
+    height: calc(100px + 2vw);
+    border-radius: 6px;
+}
+.product-card-bottom {
+    text-align: center;
+    font-size: calc(12px + 25%);
+}
+.product-price {
+    font-family: serif;
+    color: #8a4C32;
+}
+
+#map-wrapper {
+    padding: 12px 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: calc(12px + 1.5vw);
+}
+.text-container {
+    flex: 1;
+    padding: 12px;
+    font-size: 22px;
+    line-height: 32px;
+    min-width: 240px;
+}
+.image-container {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+.button {
+    padding: 12px;
+    font-size: 22px;
+    border-radius: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+#application-modal-box-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+#application-modal-box {
+    width: 60%;
+    max-width: 600px;
+    min-width: 300px;
+    background-color: #f3f3f3;
+    padding: 12px;
+}
+#application-form-wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+    grid-template-areas:
+    "fname lname"
+    "email email"
+    "resume resume"
+    "resume resume";
+    margin: 12px;
+}
+
+
+#application-modal-box-close {
+    cursor: pointer;
+    float: right;
+}
+form label input {
+    background-color: rgb(255, 255, 255);
+    padding: 0.3em;
+    width: calc(100% - 0.6em);
+    border: solid 1px #666;
+    font-size: 20px;
+} form label textarea {
+    background-color: rgb(255, 255, 255);
+    padding: 0.3em;
+    width: calc(100% - 0.6em);
+    height: 120px;
+    border: solid 1px #666;
+    resize: vertical;
+    font-size: 20px;
+}
+#application-submit-button {
+    margin: auto;
+    display: block;
+    padding: 12px 16px;
+    border: 0;
+    background-color: var(--color-dark2);
+    color: #f3f3f3;
+    cursor: pointer;
+}

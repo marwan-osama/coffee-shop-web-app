@@ -4,16 +4,23 @@
     --color-light1:#D9C7A7;
     --color-light2: #BFA78A;
 }
-
+@media screen and (max-width: 1280px) {
+    #products {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
 @media screen and (max-width: 1024px) {
     #hero-text h2 {
         font-weight: 700 !important;
     }
-    .product-card-wrapper {
-        margin: 12px 4px !important;
+    #products {
+        grid-template-columns: repeat(3, 1fr) !important;
     }
 }
 @media screen and (max-width: 600px) {
+    #hero-text {
+        bottom: 48% !important;
+    }
     #nav-bar {
         align-items: center !important;
         flex-direction: column !important;
@@ -25,12 +32,21 @@
     #nav-bar-wrapper {
         height: auto !important;
     }
-    .page-section {
-        width: 100% !important;
+    #products {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
-    .product-card-bottom > * {
-        margin: 6px 0 !important;
+}
+@media screen and (max-width: 300px) {
+    #nav-bar-list li{
+        margin: 6px !important;
     }
+    #products {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -66,10 +82,17 @@ body {
     background-color: var(--color-dark2);
 }
 
+.anchor-scroll {
+    transform: translateY(-50%);
+    position: relative;
+    top: -100px;
+}
+
 
 #page-hero-wrapper {
     width: 100%;
     height: 75vh;
+    min-height: 600px;
     background-position: bottom !important;
     background-size: cover !important;
 }
@@ -100,6 +123,10 @@ body {
     cursor: pointer;
     font-size: calc(14px + 0.2vw);
 }
+#nav-bar-list a {
+    text-decoration: none;
+    color: inherit;
+}
 #page-hero-logo {
     font-family: "Petit Formal Script", Arial, Helvetica, sans-serif;
 }
@@ -111,7 +138,7 @@ body {
 #page-hero-content {
     position: relative;
     width: 80%;
-    min-width: 300px;
+    min-width: 280px;
     margin: auto;
     height: 92%;
 }
@@ -120,18 +147,20 @@ body {
     bottom: 32%;
     left: 0;
     width: 50%;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 600px;
     font-size: calc(14px + 0.5vw); 
     color: #f3f3f3;
 }
 #hero-text h2 {
     font-weight: 400;
-    font-size: calc(16px + 1.6vw);
+    font-size: calc(16px + 1.4vw);
     line-height: 1.1em;
+    text-shadow: 0px 0px 2px #333, 0px 0px 6px #333;
 }
 #hero-text p {
     line-height: 1.4em;
+    text-shadow: 0px 0px 2px #333, 0px 0px 6px #333;
 }
 #hero-buttons-wrapper {
     color: #f3f3f3;
@@ -176,42 +205,45 @@ body {
 
 #products {
     padding: 32px 0;
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    column-gap: calc(4px + 1%);
+    row-gap: calc(12px);
+    width: 100%;
 }
 .product-border1 {
     transform: rotate(2deg);
     display: inline-block;
     background-color: #444;
+    width: 100%;
+    height: 100%;
 }
 .product-border2 {
     transform: rotate(-2deg);
     border: solid 2px var(--color-dark2);
     display: inline-block;
     background-color: #f3f3f3;
-}
-.product-card-wrapper {
-    margin: 12px;
+    width: 100%;
+    height: 100%;
 }
 .product-card-content {
-    width: calc(140px + 6vw);
-    height: calc(200px + 6vw);
-}
-.product-card-top {
-    padding: 12px;
+    width: 100%;
+    height: 100%;
 }
 .product-card-image-wrapper {
-    display: flex;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
     overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
+    background-color: #aaaaaa;
 }
-.product-card-top img {
-    height: calc(100px + 2vw);
-    border-radius: 6px;
+.product-card-image-wrapper img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .product-card-bottom {
     text-align: center;
@@ -242,7 +274,7 @@ body {
 }
 .image-container {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -275,7 +307,7 @@ body {
 #application-modal-box {
     width: 60%;
     max-width: 600px;
-    min-width: 300px;
+    min-width: 280px;
     background-color: #f3f3f3;
     padding: 12px;
 }

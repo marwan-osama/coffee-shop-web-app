@@ -4,11 +4,6 @@
     --color-light1:#D9C7A7;
     --color-light2: #BFA78A;
 }
-@media screen and (max-width: 1280px) {
-    #products {
-        grid-template-columns: repeat(4, 1fr) !important;
-    }
-}
 @media screen and (max-width: 1024px) {
     #hero-text h2 {
         font-weight: 700 !important;
@@ -206,7 +201,7 @@ body {
 #products {
     padding: 32px 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     column-gap: calc(4px + 1%);
     row-gap: calc(12px);

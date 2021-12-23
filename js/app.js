@@ -14,7 +14,7 @@ const clear = function(...items) {
         $(element).fadeOut();
     }
 }
-const toggleScrollPage = function() {
+const checkScrollBtnVisability = function() {
     if (window.screenY > (document.querySelector("body").getBoundingClientRect().top + 200)) {
         if (window.innerWidth <= 600){
             $(scrollUpButtonSmall).fadeIn();
@@ -37,5 +37,6 @@ showModalBox.addEventListener("click", handleToggleModal);
 closeModalBox.addEventListener("click", handleToggleModal);
 scrollUpButtonLarge.addEventListener("click", scrollUp);
 scrollUpButtonSmall.addEventListener("click", scrollUp);
-window.onscroll = toggleScrollPage;
-window.onresize = toggleScrollPage;
+window.onscroll = checkScrollBtnVisability;
+window.onresize = checkScrollBtnVisability;
+checkScrollBtnVisability();

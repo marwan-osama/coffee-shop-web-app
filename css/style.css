@@ -203,7 +203,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    column-gap: calc(4px + 1%);
+    column-gap: calc(4px + 2%);
     row-gap: calc(12px);
     width: 100%;
 }

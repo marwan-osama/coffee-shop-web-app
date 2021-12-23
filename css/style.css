@@ -4,11 +4,6 @@
     --color-light1:#D9C7A7;
     --color-light2: #BFA78A;
 }
-@media screen and (max-width: 1280px) {
-    #products {
-        grid-template-columns: repeat(4, 1fr) !important;
-    }
-}
 @media screen and (max-width: 1024px) {
     #hero-text h2 {
         font-weight: 700 !important;
@@ -35,6 +30,9 @@
     #products {
         grid-template-columns: repeat(2, 1fr) !important;
     }
+    .page-section {
+        width: 90% !important;
+    }
 }
 @media screen and (max-width: 300px) {
     #nav-bar-list li{
@@ -56,6 +54,11 @@ body {
     font-weight: 400;
     line-height: 1.6em;
     margin: 0;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .color-dark1 {
@@ -206,9 +209,9 @@ body {
 #products {
     padding: 32px 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    column-gap: calc(4px + 1%);
+    column-gap: calc(6px + 2%);
     row-gap: calc(12px);
     width: 100%;
 }
@@ -351,5 +354,20 @@ form label input {
     border: 0;
     background-color: var(--color-dark2);
     color: #f3f3f3;
+    cursor: pointer;
+}
+
+
+#scroll-up-button-wrapper-small, #scroll-up-button-wrapper-large {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: var(--color-dark2);
+    box-shadow: 0px 0px 4px 1px #3339;
+    text-align: center;
+    font-size: 2.0em;
+    color: white;
+    padding: 18px;
+    border-radius: 4px;
     cursor: pointer;
 }
